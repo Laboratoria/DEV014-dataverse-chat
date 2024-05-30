@@ -1,0 +1,987 @@
+@font-face {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400; 
+    src: url('../fonts/static/Inter-Regular.ttf') format('truetype'); 
+    /* Repite este bloque para cada variante de la fuente que desees utilizar */
+}
+
+
+body {
+    background-color: #151517;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: #000000;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    align-items: center;
+    
+}
+
+.logo {
+    width: 38px;
+    height: 37px;
+    margin-top: 24px;
+    margin-left: 80px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 500;
+    margin-left: 24px;
+    align-items: center;
+    display: flex;
+   
+}
+
+.hero {
+    background-image: url('data/img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 626px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white; 
+    position: relative; 
+    overflow: hidden;
+}
+
+.hero:after {
+    content: '';
+    position: absolute;
+    bottom: -100px; /* Altura del difuminado */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Altura del difuminado */
+    background-image: linear-gradient(to bottom, rgba(21, 21, 23, 0) 0%, rgba(21, 21, 23, 0.8) 100%);
+}
+
+  
+.hero h1 {
+    text-align: left;
+    font-size: 56px;
+    font-weight: 600;
+    margin-left: 80px;
+    margin-top: 337px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    text-align: left;
+    font-size: 19px;
+    font-weight: 300;
+    margin-left: 80px;
+    margin-top: 12px;
+    margin-bottom: 232px;
+    color: #FFFFFF;
+}
+
+h2 {
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 80px;
+    margin-top: 56px;
+    margin-bottom: 8px;  
+}
+
+h3 {
+    text-align: left;
+    color: #C1C1C1;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 80px;
+    margin-top: 8px;
+    text-align: left;   
+}
+
+#BtnChatGrupal {
+    margin-left: 80px;
+    background-color: #EDA83F;
+    color: #28242B;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    margin-top: 32px;
+    padding: 12px 46px 12px 46px;
+    cursor: pointer;
+}
+
+#BtnChatGrupal:hover {
+    background-color: #CC871F;
+}
+
+/* Estilos para el modal del Chat Grupal */
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    font-size: 16px;
+}
+
+#apiKeyInput {
+    margin-top: 16px;
+    width: 210px;
+}
+
+.cerrarX {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    color: #0E1E2F;
+}
+
+.cerrarX:hover {
+    color: #EDA83F;
+}
+
+/* Estilos opcionales para el botón "Enviar" del modal del Chat Grupal */
+#submitApiKeyBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #EDA83F;
+    color: #28242B;
+    font-weight: 600px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+#submitApiKeyBtn:hover {
+    background-color: #CC871F;
+}
+
+.linea {
+    border-top: 1px solid #454545; /* Estilo de la línea (1px de grosor, sólida y color negro) */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 1280px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 80px;
+    margin-left: 297px;
+    margin-right: 297px;
+    margin-bottom: 8px;
+}
+
+h5 {
+    text-align: center;
+    color: #C1C1C1;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-left: 297px;
+    margin-right: 297px;
+}
+
+.barraBuscar {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.barraBuscar::before {
+    content: url('data/img/lupa-buscar.svg');
+    position: absolute;
+    left: 10px;
+    width: 16px; 
+    height: 16px; 
+    margin-left: 205px;
+    margin-top: 20px;
+  }
+  
+.barraBuscar input[type="search"] {
+    width: 1068px;
+    height: 40px;
+    margin-top: 32px;
+    border-radius: 5px;
+    border: 1px solid #8C8D91;
+    background-color: #242427;
+    color: #E7E9EB;
+    padding-left: 44px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+.filtros {  
+    margin-top: 12px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 164px;
+    padding-right: 204px;
+}
+
+.filtros select {
+    background-color: #242427;
+    color: #E7E9EB;
+    width: 290px;
+    height: 40px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    cursor: pointer;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.empty-state{
+    color: white;
+    font-weight: normal;
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+  #limpiar {
+    background-color: #FFFFFF;
+    color: #0E1E2F;
+    width: 127px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 15px 10px 15px;
+    margin-left: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+#limpiar:hover{
+    border: 1px solid #EDA83F;
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+}
+
+.mostrar{
+    background-color: #EDA83F;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    width: 269px;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.mostrar:hover{
+    background-color: #CC871F;
+}
+
+.conten-estadisticas {
+    margin-left: 549px;
+    width: 343px;
+    border-radius: 24px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #242427;
+    border: 2px;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding: 10px; /* Agrega un poco de espacio interior */
+}
+
+.conten-estadisticas.visible {
+    opacity: 1;
+    visibility: visible;
+    height: auto; /* Ajusta automáticamente la altura */
+    margin-bottom: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.frase-edad {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 16px;
+}
+
+.edad-promedio {
+    color: #EDA83F; 
+    font-size: 56px; 
+    font-weight: 500; 
+    margin-left: 16px;
+}
+.años {
+    font-size: 19px;
+    font-weight: 400;
+    margin-left: 16px;
+}
+
+#root {
+    overflow: hidden; /* Clear float */
+}
+
+.item {
+    display: flex;
+    width: 304px;
+    height: 525px;
+    background: #242427;
+    border-radius: 24px;
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-right: 1.5rem; /* Ajusta el margen derecho para separar más los elementos */
+    margin-bottom: 2rem;
+    text-align: left;
+    float: left; /* Hace que los elementos floten a la izquierda */
+    color: #ffffff;
+    box-sizing: border-box;
+    transition: box-shadow 0.5s ease-in-out; /* Agrega transición suave al cambio de sombra */
+    overflow: hidden; /* Evita que el contenido desborde del contenedor */
+}
+
+.item:hover{
+    box-shadow: 0 0 0 2px #C1C1C1; /* Agrega una sombra al hover sin afectar el tamaño */
+}
+
+.item h3 {
+    font-size: 23px; 
+    margin: 12px;
+    padding-left: 16px;
+}
+
+.item p {
+    color: #EDA83F;
+    font-size: 17px;
+    text-align: left;
+    padding-left: 16px;    
+}
+
+.race-color,
+.age-color,
+.height-color,
+.year-color {
+    color: #C1C1C1; 
+    font-size: 13px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+}
+
+.item h4 {
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 8px 0; 
+    padding-left: 16px;
+    text-align: left;
+}
+
+.item img {
+    width: 304px;
+    height: 245px;
+    border-radius: 24px 24px 0 0;
+}
+
+button.Info {
+    width: 100px;
+    height: 40px;
+    background-color: #FFFFFF;
+    color: #0E1E2F;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+button.Info:hover {
+    border: solid 1px #EDA83F;
+    background-color: #FAFAFA;
+}
+
+.ChatIndividual {
+    width: 147px;
+    height: 38px;
+    background-color: #EDA83F; 
+    color: #28242B; 
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.ChatIndividual:hover {
+    background-color: #CC871F;
+}
+
+/* Estilos para el modal del Chat Individual */
+.modal-container-individual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-content-individual {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    font-size: 16px;
+}
+
+#individualApiKeyInput {
+    margin-top: 8px;
+    width: 210px;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    color: #0E1E2F;
+}
+
+.close-btn:hover {
+    color: #EDA83F;
+}
+
+/* Estilos opcionales para el botón "Enviar" del modal del Chat Individual */
+#submitIndividualApiKeyBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #EDA83F;
+    color: #28242B;
+    font-weight: 600px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+#submitIndividualApiKeyBtn:hover {
+    background-color: #CC871F;
+}
+
+.footerDetails {
+    background-color: #242427;
+    height: 136px;
+    display: flex;  
+    text-align: left;
+}
+
+.details strong {
+    color: #FFFFFF;
+}
+
+.details {
+    color: #C1C1C1;
+    margin-top: 12px;
+    margin-left: 80px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Ajuste de espacios entre líneas */
+.details:nth-child(2),
+.details:nth-child(3),
+.details:nth-child(4) {
+    margin-top: 6px; /* Espacio más estrecho entre líneas */
+}
+
+/* Espacio desde el borde superior del footer */
+.details:first-child {
+    margin-top: 12px;
+}
+
+/* Estilos para el contenedor del modal para el botón Ver Info*/
+.info-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+  }
+  
+  /* Estilos para el contenido del modal */
+  .info-modal-content {
+    position: relative;
+    background-color: #242427;
+    padding: 20px;
+    border-radius: 24px;
+    max-width: 846px;
+    max-height: 571px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+  }
+  
+  /* Estilos para la imagen dentro del modal */
+  .info-modal-content img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    grid-column: 1; /* Asegura que la imagen esté en la primera columna */
+    grid-row: 1; /* Asegura que la imagen ocupe toda la fila */
+  }
+  
+  .info-details {
+    color: #FFFFFF;
+    margin-left: 52px;
+    font-size: 15px;
+  }
+
+  .info-modal-content h2{
+    font-size: 23px;
+    font-weight: 700;
+    margin-top: 56px;
+    margin-left: 2px;
+    color: #FFFFFF;
+  }
+  
+  .info-modal-content h3{
+    font-size: 19px;
+    font-weight: 500;
+    padding-top: 4px;
+    margin-left: 2px;
+    color: #EDA83F;
+  }  
+  
+  .info-modal-content p {
+    color: #C1C1C1;
+    font-size: 14px;
+    font-weight: 400; 
+    margin-top: 50px;
+  }
+
+  .info-modal-content .race-color,
+  .info-modal-content .age-color,
+  .info-modal-content .height-color,
+  .info-modal-content .year-color {
+    color: #C1C1C1;
+    font-size: 14px;
+    font-weight: 400; 
+    margin-top: 50px;
+    line-height: 1.8em;
+  }
+
+  /* Estilos para el botón de cerrar */
+  .info-modal-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fafefa;
+  }
+
+  .info-modal-content .close-btn:hover {
+    color: #CC871F;
+  } 
+  
+  /* Estilos para los botones */
+  .info-modal-content .btn-chat {
+    padding: 8px 16px;
+    background-color: #EDA83F;
+    color: #28242B;
+    width: 125px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 38px;
+  }
+
+  .btn-close-modal {
+    background-color: #242427;
+    color: #FFFFFF; 
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 52px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-close-modal:hover {
+    text-decoration: underline;
+
+  }
+
+  .btn-chat:hover {
+    background-color: #CC871F;
+  }
+  
+/* Estilos comunes para ambos chats */
+.flex-Input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #8C8D91;
+    background-color: #28242B;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #FFFFFF; 
+    font-size: 15px;
+}
+
+.message-input::placeholder {
+    color: #FFFFFF;
+}
+
+.button-Send {
+    padding: 10px 15px;
+    border: none;
+    background-color: #EDA83F;
+    font-size: 15px;
+    font-weight: 600;
+    color: #28242B;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-Send:hover {
+    background-color: #CC871F;
+}
+
+/* Estilos para mensajes */
+.user-message,
+.ia-message,
+.error-message {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.user-message .message-bubble,
+  .ia-message .message-bubble,
+  .error-message .message-bubble {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+    border-radius: 10px 10px 0 10px;
+  }
+  
+.user-message .message-bubble {
+    background-color: #724500;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.ia-message .message-bubble {
+    background-color: #242427;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 10px 10px 10px 0;
+}
+
+.error-message .message-bubble {
+    background-color: #F0932B;
+}
+
+.character-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #FFFFFF;
+}
+
+.writing-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.writing-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #FFFFFF;
+}
+
+.writing {
+    font-style: italic;
+}
+
+/* Estilos específicos para el chat individual */
+.chat-body.chat-individual {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Limita el ancho máximo para mejorar la legibilidad */
+    height: 100%;
+    padding: 10px;
+  }
+
+.chat-individual .first-chat {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.chat-individual .first-chat .character-name {
+    font-size: 19px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-left: 351px;
+    margin-top: 50px;
+}
+
+.chat-individual #back-home {
+    cursor: pointer;
+}
+
+/* Estilos específicos para el chat grupal */
+.chat-body.chat-groupal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Limita el ancho máximo para mejorar la legibilidad */
+    height: 100%;
+    padding: 10px;
+}
+
+/* Nuevo estilo para el contenedor del encabezado */
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.chat-groupal .header-container {
+    display: flex;
+    align-items: center;
+}
+
+.chat-groupal .header-container h1 {
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 600;
+    margin-left: 230px; 
+    margin-top: 50px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #F0932B;
+    margin-top: 50px;
+  }
+
+  .back-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.input-Container{
+    width: 100%;
+    max-width: 850px; /* Limita el ancho máximo para mejorar la legibilidad */
+    height: 100%;
+}
+
+.message-input{
+    width: 80%;
+    margin: 20px;
+}
+
+.imageCharacter{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #FFFFFF;
+}
+
+.response-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;   
+}
+
+.message-text-container {
+    background-color: #242427;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0;  
+    max-width: 60%;
+  }
+
+  .user-message-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .user-message-container .message-bubble {
+    background-color: #724500;
+    color: #FFFFFF; 
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+  }
+  
+
+/*Estilos de la página Not Found */
+.not-found {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de distribución a vertical */
+    align-items: flex-start; /* Centra horizontalmente los elementos */
+    padding: 20px;
+    width: 100%;
+    color: white;
+    z-index: 1;
+   }
+  
+  .overlay p {
+    font-size: 19px;
+    margin-bottom: 20px;
+    margin-left: 350px;
+  }
+  
+  .overlay button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    background-color: #CC871F;
+    color: #28242B;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 147px;
+    height: 38px;
+    margin-left: 350px; 
+    margin-bottom: 200px;
+  }
+  
+  .overlay a{
+    color: #CC871F;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .error-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  
+  #button-goHome:hover {
+    background-color: #CC871F;
+  }
+  
