@@ -1,0 +1,1036 @@
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url('data/img/descarga\ \(3\).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    background-color: #000000;
+    color: #CBB279;
+    padding: 10px;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    font-size: 16px;
+    align-items: center;
+    z-index: 1000; /* Ajusta el z-index a un valor alto */
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+
+header h1 {
+    display: flex; 
+    align-items: center; 
+}
+
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding: 90px 10px 10px 10px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-weight: normal;
+    margin: 50px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    color: white;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.filtros select {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.empty-state{
+    background-color: #000000;
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    border: solid 2px;
+    border-radius: 10px;
+    padding: 24px;
+    margin-left: 112px;
+    margin-right: 112px;
+}
+
+.conten-estadisticas {
+    font-size: 28px; 
+    color: #ffffff; 
+    line-height: 1.5; 
+    text-align: center; 
+}
+
+#root {
+    overflow: hidden; /* Clear float */
+}
+
+.item {
+    width: calc(33.33% - 2rem); /* Establece el ancho de cada elemento */
+    max-width: 260px;
+    height: 500px;
+    background: #000000;
+    box-shadow: 5px 5px 25px #f6da97;
+    border-radius: 24px;
+    transition: .5s ease-in;
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem; /* Ajusta el margen derecho para separar más los elementos */
+    margin-bottom: 1.5rem; /* Ajusta el margen inferior para separar más los elementos */
+    float: left; /* Hace que los elementos floten a la izquierda */
+    text-align: center;
+    color: #fff;
+}
+
+.item h3 {
+    font-size: 24px; 
+    margin: 12px;
+}
+
+.item p {
+    color: #fff;
+    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    border:5px rgba(0, 0, 0, 0.3) solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: #D1991A;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+}
+
+.texto-centrado {
+    font-weight: normal;
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    margin: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.texto-centrado-peliculas {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin: 50px;
+    padding-left: 50px;
+}
+
+.peliculas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.peliculas img {
+    width: 360px;
+    height: 600px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+footer {
+    background-color: #000000;
+    color: #CBB279;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.logo-footer img{
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Media queries para hacer la interfaz responsive */
+@media (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas */
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    header h1 {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .filtros {
+        font-size: 18px;
+    }
+
+    .filtros select, .filtros button{
+        font-size: 16px;
+    }
+
+    .empty-state{
+        font-size: 16px;
+        padding: 16px;
+    }
+    .item {
+        width: calc(100% - 2rem);
+        max-width: 160px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    .item p {
+        font-size: 16px;
+    }
+
+    .item img {
+        width: 150px;
+        height: 150px;
+    }
+
+    button{
+        font-size: 16px;
+    }
+
+    .boton-mostrar{
+        font-size: 16px;
+    }
+
+    .texto-centrado{
+        font-size: 20px;
+    }
+
+    .texto-centrado-peliculas{
+        font-size: 20px;
+    }
+
+    .peliculas img {
+        width: 200px;
+        height: 300px;
+        margin: 10px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .logo-footer img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    
+    /*contenido principal*/
+.personaje-container {
+    max-width: 1800px; /* Ajustamos el tamaño máximo del contenedor */
+    margin-right: 20px; /* Margen derecho para separar del siguiente contenedor */
+    margin-bottom: 20px;
+    background-color: transparent; /* Hacemos el fondo transparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto; /* Para centrar horizontalmente */
+}
+
+
+.container {
+    max-width: 1700px;
+    background-color: transparent; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(218, 204, 204, 0.1);
+       
+}
+
+/*contenido de los detalles */
+.character-details {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: left; /* Alinear los componentes al lado izquierdo */
+    text-align: center;
+}
+
+
+.detail-label {
+    font-weight: bold;
+    color:#CBB279;
+    
+}
+
+.detail,
+.detail-label {
+    display: inline-block; /* Mostrar los elementos en línea uno al lado del otro */
+    margin-right: 5px; /* Ajustar el espaciado horizontal entre los elementos */
+    font-weight: bold;
+    color: #CBB279;
+}
+
+.detail-value {
+    color: #CBB279;
+    margin-bottom: 0; /* Reducir el espacio entre los elementos */
+    font-weight: normal; /* Eliminar la negrita */
+}
+
+.detail-description {
+    color: #CBB279;
+    margin-top: 5px;
+}
+
+.div-personaje-img {
+    margin-top: 20px; /* Agregar espacio en la parte superior */
+    margin-bottom: 20px; /* Agregar espacio en la parte inferior */
+}
+
+.div-personaje-img img {
+    border-radius: 20px; /* Agregar bordes redondeados */
+    box-shadow: 0 0 10px 2px #CBB279; /* Agregar un efecto de resplandor */
+}
+
+.personaje-img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* chat individual */
+
+.chats-container {
+    width: 97vw; /* Ancho del contenedor de chat al 100% del ancho de la pantalla */
+    height: 81vh; /* Altura del contenedor de chat al 100% del alto de la pantalla */
+   /* border: 1px solid #D1991A;  Borde del contenedor de chat */
+    display: flex;
+    flex-direction: column; /* Mostrar los mensajes de arriba hacia abajo */
+    flex-grow: 1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente negro */
+    z-index: 500; 
+}
+
+.chat-container {
+    width: 97vw; /* Ancho del contenedor de chat al 100% del ancho de la pantalla */
+    height: 75vh; /* Altura del contenedor de chat al 100% del alto de la pantalla */
+   /* border: 1px solid #D1991A;  Borde del contenedor de chat */
+    display: flex;
+    flex-direction: column; /* Mostrar los mensajes de arriba hacia abajo */
+    flex-grow: 1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente negro */
+    z-index: 500; 
+}
+
+ /* MODAL*/
+ .modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed; /* Posicionamiento fijo para que el modal permanezca en la misma posición incluso al hacer scroll */
+    z-index: 1000; /* Asegura que el modal esté por encima del contenedor de chat */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho del modal al 100% del viewport */
+    height: 100%; /* Altura del modal al 100% del viewport */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente para el modal */
+}
+  
+  /* Estilos para el contenido del modal */
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo blanco para el contenido del modal */
+    margin: 5% auto; /* Margen superior e inferior del 15% y centrado horizontalmente */
+    border: 1px solid #040404;
+    width: 70%; /* Ancho del contenido del modal */
+  }
+  
+  /* Estilos para el botón de cerrar */
+  .close {
+    color: #CBB279; /* Color del texto para el botón de cerrar */
+    float: right; /* Coloca el botón de cerrar a la derecha */
+    font-size: 28px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(164, 142, 142); /* Cambia el color del texto cuando se pasa el ratón o está enfocado */
+    text-decoration: none; /* Quita cualquier decoración de texto */
+    cursor: pointer; /* Cambia el cursor al puntero al pasar sobre el botón de cerrar */
+  }
+
+/* chat-perfil */
+.chat-perfil{
+    height: 80px;
+    background-color: #a27f2b;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre elementos, ajústalo según necesites */
+ }
+ 
+ .img-online {
+     width: 50px; /* Ancho pequeño */
+     height: 50px; /* Altura pequeña */
+     border-radius: 50%; /* Hacer la imagen redonda */
+ }
+
+ 
+ 
+.messages-input {
+    width: 100%; /* Ancho del contenedor de entrada de mensaje */
+    border-radius: 8px; /* Borde redondeado */
+    display: flex; /* Usamos flex para alinear contenido */
+    align-items: center; /* Alineamos el contenido verticalmente */
+    padding: 5px; /* Espaciado interno */
+    position: absolute; /* Cambiamos la posición a absoluta */
+    bottom: 0; /* Lo ubicamos en la parte inferior del contenedor */
+    left: 0; /* Lo ubicamos en el lado izquierdo del contenedor */
+    z-index: 999; /* Aseguramos que esté encima de otros elementos */
+}
+
+.messages-input input[type="text"] {
+    flex: 1; /* Que el input ocupe todo el espacio restante */
+    margin-right: 10px; /* Margen derecho para separar del botón */
+    color: #CBB279; /* Color del texto blanco */
+    background-color: black; /* Fondo negro */
+    border: 1px solid #CBB279; /* Borde blanco de 2px */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    outline: none; /* Eliminar el contorno al hacer clic */
+    font-size: 16px; /* Tamaño de la letra más grande (por ejemplo, 16px) */
+}
+
+.user-message p {
+    background-color: rgba(12, 12, 12, 0.5); /* Fondo semi-transparente */
+    padding: 20px; /* Aumentar el espacio interno para las bolitas */
+    border-radius: 50px; /* Hacer que el borde sea lo suficientemente grande para formar una forma de nube */
+    display: inline-block;
+    margin: 15px;
+    border: 2px solid #CBB279; /* Borde de color #CBB279 */
+    color: #CBB279; /* Color del texto */
+    position: relative; /* Para posicionar las bolitas */
+}
+
+.user-message {
+    margin-bottom: 10px;
+    text-align: right;
+    
+}
+
+.ia-message {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.message-bubble {
+    background-color: #a27f2b; /* Fondo semi-transparente */
+    padding: 20px; /* Aumentar el espacio interno para las bolitas */
+    border-radius: 50px; /* Hacer que el borde sea lo suficientemente grande para formar una forma de nube */
+    display: inline-block;
+    margin: 15px;
+    border: 2px solid #CBB279; /* Borde de color #CBB279 */
+    color: #000000; /* Color del texto */
+    position: relative; /* Para posicionar las bolitas */
+}
+
+.message-image {
+    width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+
+.error-message {
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}
+
+
+
+
+/* chat grupal */
+
+.grupal-personajes-container {
+    display: flex; /* Utilizar flexbox */
+    gap: 10px; /* Espacio entre los elementos */
+    overflow-x: auto; /* Agregar desplazamiento horizontal si es necesario */
+    padding: 0 10px 10px; /* Espaciado interno: 0 arriba, 10px derecha e izquierda, 10px abajo */
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin-bottom: -8px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.containerchat {
+    position: relative; /* Añadir posición relativa para el contenedor de chat */
+    width: calc(100% - 40px); /* Ajustar el ancho para dejar espacio para los personajes */
+    margin: 20px auto; /* Centrar el contenedor de chat */
+
+  }
+  
+  .grupal-personajes-scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Permitir desplazamiento horizontal si el contenido se desborda */
+    overflow-y: hidden; /* Ocultar el desplazamiento vertical */
+    scroll-snap-type: x mandatory; /* Establecer el desplazamiento automático horizontal */
+  }
+  
+  .grupal-personajes-scroll::-webkit-scrollbar {
+    width: 1px; /* Ancho del scrollbar */
+    height: 8px;
+  }
+  
+  .grupal-personajes-scroll::-webkit-scrollbar-thumb {
+    background-color: #CBB279; /* Color del thumb del scrollbar */
+    border-radius: 3px; /* Borde redondeado del thumb */
+  }
+  
+  .grupal-personajes-scroll::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo del track del scrollbar */
+  }
+
+
+  .grupal-personaje-selector {
+    scroll-snap-align: start; /* Alinear los elementos al inicio del scroll */
+    cursor: pointer;
+    margin-right: 8px; /* Ajusta el margen derecho según tu preferencia */
+}
+
+.grupal-personaje-selector-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #CBB279;
+}
+
+.container-chat {
+    overflow-y: auto;
+     /* Hacer que el contenedor de chat ocupe todo el espacio disponible */
+    padding: 10px; /* Agregar espacio interno */
+   
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #CBB279;
+  outline: none;
+}
+
+
+.writing {
+  margin-top: 10px;
+  color: #CBB279;
+}
+
+.response-message {
+    background-color: #CBB279; /* Fondo semi-transparente */
+    padding: 20px; /* Aumentar el espacio interno para las bolitas */
+    border-radius: 50px;
+    display: inline-block;
+    margin: 15px;
+    border: 2px solid #CBB279; /* Borde de color #CBB279 */
+    color: #080808; /* Color del texto */
+    position: relative; /* Para posicionar las bolitas */
+}
+
+.error-message {
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}
+
+.back-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    margin-left: auto; /* Mueve el ícono de vuelta a la derecha */
+    cursor: pointer;
+    background-color: #D1991A;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.message-info {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #D1991A;
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: #D1991A;
+    margin-top: 5px;
+    
+}
+
+.containerapikey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .Container {
+    text-align: center;
+  }
+  .title {
+    font-size: 2em;
+    color: #CBB279;
+  }
+  .message-api-key-input {
+    width: 300px;
+    height: 40px;
+  }
+  .apiKey-save-button,
+  .back-button {
+    margin-top: 10px;
+  }
+  .back-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+  .save-confirmation {
+    display: none;
+    color: green;
+  }
+}
+
+/*css del la vista personajes*/
+
+/*contenido principal*/
+.personaje-container {
+    max-width: 1800px; /* Ajustamos el tamaño máximo del contenedor */
+    margin-right: 20px; /* Margen derecho para separar del siguiente contenedor */
+    margin-bottom: 20px;
+    background-color: transparent; /* Hacemos el fondo transparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto; /* Para centrar horizontalmente */
+}
+
+
+.container {
+    max-width: 1700px;
+    background-color: transparent; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(218, 204, 204, 0.1);
+       
+}
+
+/*contenido de los detalles */
+.character-details {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: left; /* Alinear los componentes al lado izquierdo */
+    text-align: center;
+}
+
+
+.detail-label {
+    font-weight: bold;
+    color:#CBB279;
+    
+}
+
+.detail,
+.detail-label {
+    display: inline-block; /* Mostrar los elementos en línea uno al lado del otro */
+    margin-right: 5px; /* Ajustar el espaciado horizontal entre los elementos */
+    font-weight: bold;
+    color: #CBB279;
+}
+
+.detail-value {
+    color: #CBB279;
+    margin-bottom: 0; /* Reducir el espacio entre los elementos */
+    font-weight: normal; /* Eliminar la negrita */
+}
+
+.detail-description {
+    color: #CBB279;
+    margin-top: 5px;
+}
+
+.div-personaje-img {
+    margin-top: 20px; /* Agregar espacio en la parte superior */
+    margin-bottom: 20px; /* Agregar espacio en la parte inferior */
+}
+
+.div-personaje-img img {
+    border-radius: 20px; /* Agregar bordes redondeados */
+    box-shadow: 0 0 10px 2px #CBB279; /* Agregar un efecto de resplandor */
+}
+
+.personaje-img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* chat individual */
+
+.chats-container {
+    width: 97vw; /* Ancho del contenedor de chat al 100% del ancho de la pantalla */
+    height: 81vh; /* Altura del contenedor de chat al 100% del alto de la pantalla */
+   /* border: 1px solid #D1991A;  Borde del contenedor de chat */
+    display: flex;
+    flex-direction: column; /* Mostrar los mensajes de arriba hacia abajo */
+    flex-grow: 1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente negro */
+    z-index: 500; 
+}
+
+.chat-container {
+    width: 97vw; /* Ancho del contenedor de chat al 100% del ancho de la pantalla */
+    height: 75vh; /* Altura del contenedor de chat al 100% del alto de la pantalla */
+   /* border: 1px solid #D1991A;  Borde del contenedor de chat */
+    display: flex;
+    flex-direction: column; /* Mostrar los mensajes de arriba hacia abajo */
+    flex-grow: 1;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente negro */
+    z-index: 500; 
+}
+
+ /* MODAL*/
+ .modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed; /* Posicionamiento fijo para que el modal permanezca en la misma posición incluso al hacer scroll */
+    z-index: 1000; /* Asegura que el modal esté por encima del contenedor de chat */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho del modal al 100% del viewport */
+    height: 100%; /* Altura del modal al 100% del viewport */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente para el modal */
+}
+  
+  /* Estilos para el contenido del modal */
+  .modal-content {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo blanco para el contenido del modal */
+    margin: 5% auto; /* Margen superior e inferior del 15% y centrado horizontalmente */
+    border: 1px solid #040404;
+    width: 70%; /* Ancho del contenido del modal */
+  }
+  
+  /* Estilos para el botón de cerrar */
+  .close {
+    color: #CBB279; /* Color del texto para el botón de cerrar */
+    float: right; /* Coloca el botón de cerrar a la derecha */
+    font-size: 28px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(164, 142, 142); /* Cambia el color del texto cuando se pasa el ratón o está enfocado */
+    text-decoration: none; /* Quita cualquier decoración de texto */
+    cursor: pointer; /* Cambia el cursor al puntero al pasar sobre el botón de cerrar */
+  }
+
+/* chat-perfil */
+.chat-perfil{
+    height: 80px;
+    background-color: #a27f2b;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre elementos, ajústalo según necesites */
+ }
+ 
+ .img-online {
+     width: 50px; /* Ancho pequeño */
+     height: 50px; /* Altura pequeña */
+     border-radius: 50%; /* Hacer la imagen redonda */
+ }
+
+ 
+ 
+.messages-input {
+    width: 100%; /* Ancho del contenedor de entrada de mensaje */
+    border-radius: 8px; /* Borde redondeado */
+    display: flex; /* Usamos flex para alinear contenido */
+    align-items: center; /* Alineamos el contenido verticalmente */
+    padding: 5px; /* Espaciado interno */
+    position: absolute; /* Cambiamos la posición a absoluta */
+    bottom: 0; /* Lo ubicamos en la parte inferior del contenedor */
+    left: 0; /* Lo ubicamos en el lado izquierdo del contenedor */
+    z-index: 999; /* Aseguramos que esté encima de otros elementos */
+}
+
+.messages-input input[type="text"] {
+    flex: 1; /* Que el input ocupe todo el espacio restante */
+    margin-right: 10px; /* Margen derecho para separar del botón */
+    color: #CBB279; /* Color del texto blanco */
+    background-color: black; /* Fondo negro */
+    border: 1px solid #CBB279; /* Borde blanco de 2px */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    outline: none; /* Eliminar el contorno al hacer clic */
+    font-size: 16px; /* Tamaño de la letra más grande (por ejemplo, 16px) */
+}
+
+.user-message p {
+    background-color: #CBB279; /* Fondo semi-transparente */
+    padding: 20px; /* Aumentar el espacio interno para las bolitas */
+    border-radius: 50px; /* Hacer que el borde sea lo suficientemente grande para formar una forma de nube */
+    display: inline-block;
+    margin: 15px;
+    border: 2px solid #CBB279; /* Borde de color #CBB279 */
+    color: #000000; /* Color del texto */
+    position: relative; /* Para posicionar las bolitas */
+}
+
+.user-message {
+    margin-bottom: 10px;
+    text-align: right;
+    
+}
+
+.ia-message {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.message-bubble {
+    background-color: #a27f2b; /* Fondo semi-transparente */
+    padding: 20px; /* Aumentar el espacio interno para las bolitas */
+    border-radius: 50px; /* Hacer que el borde sea lo suficientemente grande para formar una forma de nube */
+    display: inline-block;
+    margin: 15px;
+    border: 2px solid #CBB279; /* Borde de color #CBB279 */
+    color: #000000; /* Color del texto */
+    position: relative; /* Para posicionar las bolitas */
+}
+
+.message-image {
+    width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+
+.error-message {
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}
+
+
+
+
+/* chat grupal */
+
+.grupal-personajes-container {
+    display: flex; /* Utilizar flexbox */
+    gap: 10px; /* Espacio entre los elementos */
+    overflow-x: auto; /* Agregar desplazamiento horizontal si es necesario */
+    padding: 0 10px 10px; /* Espaciado interno: 0 arriba, 10px derecha e izquierda, 10px abajo */
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin-bottom: -8px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.containerchat {
+    position: relative; /* Añadir posición relativa para el contenedor de chat */
+    width: calc(100% - 40px); /* Ajustar el ancho para dejar espacio para los personajes */
+    margin: 20px auto; /* Centrar el contenedor de chat */
+
+  }
+  
+  .grupal-personajes-scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Permitir desplazamiento horizontal si el contenido se desborda */
+    overflow-y: hidden; /* Ocultar el desplazamiento vertical */
+    scroll-snap-type: x mandatory; /* Establecer el desplazamiento automático horizontal */
+  }
+  
+  .grupal-personajes-scroll::-webkit-scrollbar {
+    width: 1px; /* Ancho del scrollbar */
+    height: 8px;
+  }
+  
+  .grupal-personajes-scroll::-webkit-scrollbar-thumb {
+    background-color: #CBB279; /* Color del thumb del scrollbar */
+    border-radius: 3px; /* Borde redondeado del thumb */
+  }
+  
+  .grupal-personajes-scroll::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo del track del scrollbar */
+  }
+
+
+  .grupal-personaje-selector {
+    scroll-snap-align: start; /* Alinear los elementos al inicio del scroll */
+    cursor: pointer;
+    margin-right: 8px; /* Ajusta el margen derecho según tu preferencia */
+}
+
+.grupal-personaje-selector-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #CBB279;
+}
+
+.container-chat {
+    overflow-y: auto;
+     /* Hacer que el contenedor de chat ocupe todo el espacio disponible */
+    padding: 10px; /* Agregar espacio interno */
+   
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #CBB279;
+  outline: none;
+}
+
+
+.writing {
+  margin-top: 10px;
+  color: #CBB279;
+}
+
+.response-message {
+    background-color: #CBB279; /* Fondo semi-transparente */
+    padding: 20px; /* Aumentar el espacio interno para las bolitas */
+    border-radius: 50px; /* Hacer que el borde sea lo suficientemente grande para formar una forma de nube */
+    display: inline-block;
+    margin: 15px;
+    border: 2px solid #CBB279; /* Borde de color #CBB279 */
+    color: #000000; /* Color del texto */
+    position: relative; /* Para posicionar las bolitas */
+}
+
+.error-message {
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}
+
+.back-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    margin-left: auto; /* Mueve el ícono de vuelta a la derecha */
+    cursor: pointer;
+    background-color: #D1991A;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.message-info {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #D1991A;
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: #D1991A;
+    margin-top: 5px;
+    
+}
+
+.containerapikey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .Container {
+    text-align: center;
+  }
+  .title {
+    font-size: 2em;
+    color: #CBB279;
+  }
+  .message-api-key-input {
+    width: 300px;
+    height: 40px;
+  }
+  .apiKey-save-button,
+  .back-button {
+    margin-top: 10px;
+  }
+  .back-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+  .save-confirmation {
+    display: none;
+    color: green;
+  }
